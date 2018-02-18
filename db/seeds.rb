@@ -8,3 +8,7 @@
 
 names = %w{Kasia Maciek Janek Patryk Kamil Czesiu Grzechu}
 names.each { |name| User.create(name: name) }
+
+User.all.each do |user|
+user.orders.create(name: "Zamowienie #{user.name}")
+end
