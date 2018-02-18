@@ -5,4 +5,6 @@ class StaticPagesController < ApplicationController
 	def about; end
 
 	def mission; end
+
+	def career; end
 end
