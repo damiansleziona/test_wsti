@@ -4,5 +4,6 @@
 = link_to 'Career', career_path
 - if current_user
 	= link_to 'Wyloguj', destroy_user_session_path, method: :delete
+	= link_to 'Zamowienia', user_orders_path(current_user)
 - else
 	= link_to 'Zaloguj', new_user_session_path

@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root to: "users#index"
 
   devise_for :users
-  resources :users
  
   get '/test', to: proc { |e| [200, {}, ["ok"]] }
 
@@ -11,5 +10,7 @@ Rails.application.routes.draw do
   get '/mission', to: "static_pages#mission"
   get '/career', to: "static_pages#career"
 
-  resources :orders
+  resources :users do
+  	resources :orders
+  end
 end
